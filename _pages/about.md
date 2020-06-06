@@ -4,7 +4,7 @@ permalink: /about/
 title: About
 author_profile: true
 header:
-    overlay_image: /assets/images/joel-filipe-small-warmer.jpg
+
 classes: wide
 date: August 28, 2019
 ---
