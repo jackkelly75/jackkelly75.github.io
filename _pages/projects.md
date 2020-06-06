@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Projects"
+title:
 permalink: /projects/
 header:
 author_profile: true
@@ -54,18 +54,18 @@ feature_row1-3:
     - EDA
     - Business Analytics
 
-feature_row1-4:
-  - image_path: /assets/images/portfolio/Tableau-dashboard-1200.jpg
-    alt: "Tableau Dashboard"
-    title: "Tableau Dashboard for Watershed Properties"
-    text: "In this project, I performed data analysis to recommend short-term renting strategy for Watershed, a residential rental properties firm. To do this, I extracted relevant data from a real estate MySQL database, analyzed data in Excel to identify the best opportunities to increase revenue and maximize profits and created a Tableau dashboard to show the results of a sensitivity analysis."
-    url: "https://public.tableau.com/profile/katerina.bosko#!/vizhome/Bosko_dashboardforWatershedproperties/FinalDashboard"
-    btn_label: "Dashboard"
-    btn_class: "btn--primary"
-    tags: 
-    - Tableau
-    - Excel
-    - MySQL
+#feature_row1-4:
+#  - image_path: /assets/images/portfolio/Tableau-dashboard-1200.jpg
+#    alt: "Tableau Dashboard"
+#    title: "Tableau Dashboard for Watershed Properties"
+#    text: "In this project, I performed data analysis to recommend short-term renting strategy for Watershed, a residential rental properties firm. To do this, I extracted relevant data from a real estate MySQL database, analyzed data in Excel to identify the best opportunities to increase revenue and maximize profits and created a Tableau dashboard to show the results of a sensitivity analysis."
+#    url: "https://public.tableau.com/profile/katerina.bosko#!/vizhome/Bosko_dashboardforWatershedproperties/FinalDashboard"
+#    btn_label: "Dashboard"
+#    btn_class: "btn--primary"
+#    tags: 
+#    - Tableau
+#    - Excel
+#    - MySQL
 
 # feature_row2:
 #   - image_path: /assets/images/portfolio/disaster-response-thumb-800.jpg
@@ -83,34 +83,34 @@ feature_row1-4:
 #     - Flask-app
 #     - ML Pipeline
 
-feature_row3:
-  - image_path: /assets/images/portfolio/IBM_DS_platform.jpg
-    alt: "IBM data science platform"
-    title: "Content Recommendations for IBM users"
-    text: "In this project, I implemented different recommendation engines for users of the IBM Watson Studio platform. <br>
-    - _Rank Based Recommendations_: recommended the most popular articles based on the highest user interactions <br>
-    - _User-User Based Collaborative Filtering_: recommended unseen articles that were viewed by most similar users <br>
-    - _Content Based Recommendations_: recommended articles based on similarity of content <br>"
-    url: "https://github.com/k-bosko/recommendations_IBM"
-    btn_label: "Code"
-    btn_class: "btn--primary"
-    tags: 
-    - recommender system
-    - collaborative filtering
+#feature_row3:
+#  - image_path: /assets/images/portfolio/IBM_DS_platform.jpg
+#    alt: "IBM data science platform"
+#    title: "Content Recommendations for IBM users"
+#    text: "In this project, I implemented different recommendation engines for users of the IBM Watson Studio platform. <br>
+#    - _Rank Based Recommendations_: recommended the most popular articles based on the highest user interactions <br>
+#    - _User-User Based Collaborative Filtering_: recommended unseen articles that were viewed by most similar users <br>
+#    - _Content Based Recommendations_: recommended articles based on similarity of content <br>"
+#    url: "https://github.com/k-bosko/recommendations_IBM"
+#    btn_label: "Code"
+#    btn_class: "btn--primary"
+#    tags: 
+#    - recommender system
+#    - collaborative filtering
 
-feature_row4:
-  - image_path: assets/images/portfolio/customer_segmentation-thumb-800-light.jpg
-    portfolio_caption: "Photo Credit [Dynamic Concepts Blog](http://www.dynamic-concepts.nl/en/segmentation/)"
-    alt: "customer segmentation viz"
-    title: "Customer Segmentation"
-    text: "In this project, I applied unsupervised learning techniques to identify segments of the population that form the core customer base for a mail-order sales company in Germany. I worked with real-life data provided by Bertelsmann partners AZ Direct and Arvato Finance Solution. Prior to applying the machine learning methods, I assessed and cleaned the data in order to convert the data into a usable form."
-    url: "https://github.com/k-bosko/customer_segmentation"
-    btn_label: "Code"
-    btn_class: "btn--primary"
-    tags: 
-        - k-means clustering
-        - PCA
-        - unsupervised ML
+#feature_row4:
+#  - image_path: assets/images/portfolio/customer_segmentation-thumb-800-light.jpg
+#    portfolio_caption: "Photo Credit [Dynamic Concepts Blog](http://www.dynamic-concepts.nl/en/segmentation/)"
+#    alt: "customer segmentation viz"
+#    title: "Customer Segmentation"
+#    text: "In this project, I applied unsupervised learning techniques to identify segments of the population that form the core customer base for a mail-order sales company in Germany. I worked with real-life data provided by Bertelsmann partners AZ Direct and Arvato Finance Solution. Prior to applying the machine learning methods, I assessed and cleaned the data in order to convert the data into a usable form."
+#    url: "https://github.com/k-bosko/customer_segmentation"
+#    btn_label: "Code"
+#    btn_class: "btn--primary"
+#    tags: 
+#        - k-means clustering
+#        - PCA
+#        - unsupervised ML
 
 # feature_row5:
 #   - image_path: assets/images/portfolio/deep_learning-thumb-800.jpg
@@ -128,9 +128,7 @@ feature_row4:
 ---
 
 
-Here I present selected projects that show my **Data Science skills for Marketing and Business problems**. 
 
-For full list of the projects I worked on see [Certificates](/certificates/) section.
 
 &nbsp;
 {% include feature_row id="feature_row1-1" type="left" %}
