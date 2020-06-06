@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "Portfolio"
-permalink: /portfolio/
+title:
+permalink: /projects/
 header:
 author_profile: true
 classes: wide
