@@ -5,10 +5,15 @@ title: About
 author_profile: true
 header:
     overlay_image: /assets/images/joel-filipe-small-warmer.jpg
-    caption: "Photo by [Joel Filipe](https://unsplash.com/@joelfilip) on [Unsplash](https://unsplash.com)"
 classes: wide
 date: August 28, 2019
 ---
+
+I am a Medical studies PhD candidate at the university of Plymouth, working on large genomics data. I take a data-driven approach to investigating the genomics that underlie neurodegenerative diseases, to really make the most out of all the information that we have access to. 
+
+I received my MSc from the biomedical sciences program at Plymouth University and my BSc in Biomedicine from the University of East Anglia. I'm passionate about integrating biology and data science.
+
+
 
 <figure style="width: 30%" class="align-right">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/hawaii.jpg" alt="">
