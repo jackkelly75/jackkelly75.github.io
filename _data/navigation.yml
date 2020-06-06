@@ -6,7 +6,7 @@ main:
     url: /about/
   - title: "Portfolio"
     url: /portfolio/
-  - title: "Resume"
+  - title: "CV"
     url: /assets/docs/one_column_CV.pdf   
   - title: "Certificates"
     url: /certificates/
