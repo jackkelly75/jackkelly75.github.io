@@ -6,8 +6,10 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
+  - title: "Publications"
+    url: /publications/
   - title: "CV"
-    url: /assets/docs/one_column_CV.pdf   
+    url: /assets/docs/one_column_CV.pdf
   - title: "Certificates"
     url: /certificates/
   - title: "Achievements"
