@@ -1,10 +1,13 @@
 ---
 layout: single
-title: "Publications"
 permalink: /publications/
+title: Publications
 author_profile: true
+header:
 classes: wide
 ---
+
+## Publications
 
 # 2020
 
