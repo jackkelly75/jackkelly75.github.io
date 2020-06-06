@@ -1,6 +1,6 @@
 ---
 layout: single
-title:
+title: "Projects"
 permalink: /projects/
 header:
 author_profile: true
@@ -127,13 +127,6 @@ feature_row4:
 #         - PyTorch
 ---
 
-## Skills
-**Tools**: Python, Jupyter Notebook, Visual Studio Code, SQL, Tableau, Git, Command Line, Excel
-
-**Libraries**: NumPy, Pandas, Scikit-learn, matplotlib, seaborn, nltk, BeautifulSoup, PyTorch
-
-
-## Projects
 
 Here I present selected projects that show my **Data Science skills for Marketing and Business problems**. 
 
