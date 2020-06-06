@@ -1,12 +1,12 @@
 ---
 layout: single
 permalink: /about/
-title: About
+title:
 author_profile: true
 header:
 
 classes: wide
-date: August 28, 2019
+date:
 ---
 
 I am a Medical studies PhD candidate at the university of Plymouth, working on large genomics data. I take a data-driven approach to investigating the genomics that underlie neurodegenerative diseases, to really make the most out of all the information that we have access to. 
