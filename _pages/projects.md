@@ -11,12 +11,12 @@ feature_row1-1:
   - image_path: assets/images/posts/networks.png
     alt: "Visualisation of AD and PD netoworks"
     title: "Genetic networks in Parkinson's and Alzheimer's disease"
-    text: "In this project, I  conducted a network analysis of Parkinson's and Alzheimer's disease based on their gene expressions in blood. We identified modules that were not preserved between disease and healthy control (HC) networks, and important hub genes and transcription factors (TFs) in these modules. We highlighted that the PD module not preserved in HCs was associated with insulin resistance, and HDAC6 was identified as a hub gene in this module which may have the role of influencing tau phosphorylation and autophagic flux in neurodegenerative disease. The AD module associated with regulation of lipolysis in adipocytes and neuroactive ligand-receptor interaction was not preserved in healthy and mild cognitive impairment networks and the key hubs TRPC5 and BRAP identified as potential targets for therapeutic treatments of AD. Our study demonstrated that PD and AD share common disrupted genetics and identified novel pathways, hub genes and TFs that may be new areas for mechanistic study and important targets in both diseases."
+    text: "In this project, I  conducted a network analysis of Parkinson's and Alzheimer's disease based on their gene expressions in blood. Modules, important hub genes and transcription factors that were not preserved between disease and healthy networks were identified. A Parkinson's module associated with insulin resistance was not preserved in healthy networks, and HDAC6 was identified as a hub gene in this module which may have the role of influencing tau phosphorylation and autophagic flux in neurodegenerative disease. The AD module associated with regulation of lipolysis in adipocytes and neuroactive ligand-receptor interaction was not preserved in healthy and mild cognitive impairment networks and the key hubs TRPC5 and BRAP identified as potential targets for therapeutic treatments of AD. Our study demonstrated that PD and AD share common disrupted genetics and identified novel pathways, hub genes and TFs that may be new areas for mechanistic study and important targets in both diseases. Read the paper here [[PDF](http://jackkelly75.github.io/files/aging_preprint.pdf)]"
     url: "https://github.com/jackkelly75/Network_Hub_Detection_Kelly2020"
     btn_label: "Code + Presentation"
     btn_class: "btn--primary"
     url2: "/AD-PD_network/"
-    btn_label2: "Technical Report"
+    btn_label2: "Paper overview"
     btn_class: "btn--primary"
     tags: 
         - Network analysis
