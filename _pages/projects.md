@@ -8,20 +8,21 @@ classes: wide
 date:
 
 feature_row1-1:
-  - image_path: assets/images/posts/starbucks-cluster-conversion-rates.png
-    alt: "Clusterisation results based on Conversion Rates"
-    title: "Target Audience for Starbucks Rewards App"
-    text: "In this project, I analyzed the customer behavior in the Starbucks Rewards Mobile App. After signing up for the app, customers receive promotions every few days. The task was to identify which customers are influenced by promotional offers the most and what types of offers to send them in order to maximize the revenue. I used PCA and K-Means clustering to arrive at 3 customer segments (Disinterested, BOGO, Discount) based on Average Conversion Rates and explored their demographic profiles and shopping habits."
-    url: "https://github.com/k-bosko/Starbucks_rewards"
+  - image_path: assets/images/posts/networks.png
+    alt: "Visualisation of AD and PD netoworks"
+    title: "Genetic networks in Parkinson’s and Alzheimer’s disease"
+    text: "In this project, I  conducted a network analysis of Parkinson's and Alzheimer's disease based on their gene expressions in blood. We identified modules that were not preserved between disease and healthy control (HC) networks, and important hub genes and transcription factors (TFs) in these modules. We highlighted that the PD module not preserved in HCs was associated with insulin resistance, and HDAC6 was identified as a hub gene in this module which may have the role of influencing tau phosphorylation and autophagic flux in neurodegenerative disease. The AD module associated with regulation of lipolysis in adipocytes and neuroactive ligand-receptor interaction was not preserved in healthy and mild cognitive impairment networks and the key hubs TRPC5 and BRAP identified as potential targets for therapeutic treatments of AD. Our study demonstrated that PD and AD share common disrupted genetics and identified novel pathways, hub genes and TFs that may be new areas for mechanistic study and important targets in both diseases."
+    url: "https://github.com/jackkelly75/Network_Hub_Detection_Kelly2020"
     btn_label: "Code + Presentation"
     btn_class: "btn--primary"
-    url2: "/Starbucks-Rewards-Program/"
+    url2: "/AD-PD_network/"
     btn_label2: "Technical Report"
     btn_class: "btn--primary"
     tags: 
-        - Marketing
-        - Segmentation
-        - k-means clustering
+        - Network analysis
+        - Alzheimer's
+        - Parkinson's
+        - Genomics
 
 feature_row1-2:
   - image_path: /assets/images/portfolio/retention_rates.png
