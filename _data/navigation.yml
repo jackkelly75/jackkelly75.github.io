@@ -12,6 +12,8 @@ main:
     url: /PostersPresentations/
   - title: "CV"
     url: /assets/docs/one_column_CV.pdf
+  - title: "Training"
+    url: /training/
   - title: "Archive"
     url: /year-archive/
 
