@@ -30,7 +30,7 @@ and here
 ### Courses
 
 
-* [Big Data methods in R](http://jackkelly75.github.io/files/bigdatamethods.pdf)
+* [Big Data methods in R](http://jackkelly75.github.io/assets/docs/bigdatamethods.pdf)
   * Run by Mind Project
   * 15-16/03/2018
   * Learnt:
@@ -41,7 +41,7 @@ and here
     * Hadoop Distributed File System and HBase database through SQL and noSQL
     * R connectivity to Spark
 
-* [M101P: MongoDB for Developers](http://jackkelly75.github.io/files/mongoDB.pdf)
+* [M101P: MongoDB for Developers](http://jackkelly75.github.io/assets/docs/mongoDB.pdf)
   * Run by MongoDB University
   * 29/05-17/07 2018
   * Learnt:
