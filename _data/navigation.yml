@@ -8,11 +8,10 @@ main:
     url: /projects/
   - title: "Publications"
     url: /publications/
+  - title: "Posters + Presentations"
+    url: /PostersPresentations/
   - title: "CV"
     url: /assets/docs/one_column_CV.pdf
-  - title: "Certificates"
-    url: /certificates/
-  - title: "Achievements"
-    url: /achievements/
   - title: "Archive"
     url: /year-archive/
+
