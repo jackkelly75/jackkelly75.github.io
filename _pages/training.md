@@ -9,6 +9,59 @@ header:
 classes: wide
 ---
 
+
+Projects
+======
+
+* IPDGC Hackathon
+  * IPDGC Project using Python to scrape Reddit data to perform sentiment analysis and investigate attitudes towards Parkinson's disease.
+    * Optimising various methods of cleaning text data and stop word selection.
+    * Sentiment analysis
+    * Using GitHub for team projects
+    
+
+Courses
+======
+
+* [Big Data methods in R](http://jackkelly75.github.io/files/bigdatamethods.pdf)
+  * Run by Mind Project
+  * 15-16/03/2018
+  * Learnt:
+    * Out-of-memory analysis of large data-sets in R using various packages
+    * Creating and using different SQL databases (eg. mongoDB) in R to store and handle large data sets of different data types
+    * Introduction to structure and uses of Hadoop and Spark and practical mining large text files to count word
+    * Implement MapReduce framework through Hadoop straight from R console
+    * Hadoop Distributed File System and HBase database through SQL and noSQL
+    * R connectivity to Spark
+
+* [M101P: MongoDB for Developers](http://jackkelly75.github.io/files/mongoDB.pdf)
+  * Run by MongoDB University
+  * 29/05-17/07 2018
+  * Learnt:
+    * use MongoDB as the database for Python application
+    * CRUD operations
+    * Using the Aggregation Framework
+* Plymouth University AINT351 Machine Learning module
+  * Learnt:
+    * unsupervised, supervised and reinforcement learning from Bayesian, Information Theoretic and decision making perspectives
+
+Textbooks
+======
+* Introduction to statistical learning with application in R (7th Edition)
+  * Authored by: Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani
+  * 1/06-1/08 2017
+  * Learnt:
+    * Linear Regression
+    * Classification
+    * Resampling methods
+    * Linear Model Selection and Regularization
+    * Moving Beyond Linearity
+    * Tree-Based Methods
+    * Support Vector Machines
+    * Unsupervised Learning
+
+
+
 ### Marketing Analytics with Python | DataCamp [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/track/5ce028dc1fb95454ddec86549442d8c8fa79e341)
  - Predicting Customer Churn in Python [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/course/7947b18bcde3fed9e459b1b2bebded4bfcf8a302)
  - Customer Analytics and A/B Testing in Python [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/course/f9b1378a8315ee335279c53040bbf287fd455976)
