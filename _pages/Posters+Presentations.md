@@ -11,11 +11,6 @@ classes: wide
 
 You can find the list of my attended conferences below.
 
-<a href="http://jackkelly75.github.io/assets/posters/ARUK2020.png">
-<img src="http://jackkelly75.github.io/assets/posters/ARUK2020.png" alt="AD_poster"
-	title="AD_poster" width="325" height="275" />
-</a>
-
 
 
 # 2020
@@ -48,3 +43,10 @@ Presented poster on very early results of my network analysis of Parkinson's dis
 March 19-21, 2018  
 Presented poster on very early results of my network analysis of Parkinson's disease. This work has since been published, which can be found [here](https://rdcu.be/bsWLL)  
 [Large PDF of this poster can be found here](http://jackkelly75.github.io/assets/posters/ARUK2018.pdf)
+
+
+
+<a href="http://jackkelly75.github.io/assets/posters/ARUK2020.png">
+<img src="http://jackkelly75.github.io/assets/posters/ARUK2020.png" alt="AD_poster"
+	title="AD_poster" width="325" height="275" />
+</a>
