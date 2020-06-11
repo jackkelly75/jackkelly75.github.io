@@ -11,6 +11,12 @@ classes: wide
 
 You can find the list of my attended conferences below.
 
+<a href="http://jackkelly75.github.io/assets/posters/ARUK2020.png">
+<img src="http://jackkelly75.github.io/assets/posters/ARUK2020.png" alt="AD_poster"
+	title="AD_poster" width="650" height="550" />
+</a>
+
+
 
 # 2020
 * **Alzheimer's Research UK conference**, Newport, UK  
