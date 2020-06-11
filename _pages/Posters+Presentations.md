@@ -13,7 +13,7 @@ You can find the list of my attended conferences below.
 
 
 # 2020
-* Alzheimer's Research UK 2020 conference, Newport, UK  
+* **Alzheimer's Research UK conference**, Newport, UK  
 *Integrated systems approach to identify key dysregulated processes and hub genes in Alzheimer’s disease*  
 March 24, 2020  
 Accepted for poster and early careers day talk on gene-gene interaction networks in Alzheimer's disease. Conference cancelled due to COVID-19. Poster shared online in lieu of conference.  
@@ -22,7 +22,7 @@ Presented poster on results of my network analysis of Alzheimer's disease. This 
 
 # 2019
 
-* AD/PD 2019, Lisbon, Portugal  
+* **AD/PD 2019**, Lisbon, Portugal  
 *Integrated systems approach to identify gentic networks and hubs in Parkinson's disease*  
 March 26-31, 2019  
 Presented poster on results of my network analysis of Parkinson's disease. This work has since been published, for which more info can be found [here](http://jackkelly75.github.io/assets/docs/publications/aging_preprint.pdf)  
@@ -31,13 +31,13 @@ Presented poster on results of my network analysis of Parkinson's disease. This 
 
 
 # 2018
-* Parkinson's UK conference, York, UK  
+* **Parkinson's UK conference**, York, UK  
 *Integrated systems approach to identify genetic networks and hubs in Parkinson’s disease*  
 November 12-14, 2018  
 Presented poster on very early results of my network analysis of Parkinson's disease. This work has since been published, which can be found [here](https://rdcu.be/bsWLL)  
 [Large PDF of this poster can be found here](http://jackkelly75.github.io/files/PDUK2018.pdf)
 
-* Alzheimer's research UK conference, London, UK  
+* **Alzheimer's research UK conference**, London, UK  
 *Cross-talk between Parkinson and Alzheimer's disease*  
 March 19-21, 2018  
 Presented poster on very early results of my network analysis of Parkinson's disease. This work has since been published, which can be found [here](https://rdcu.be/bsWLL)  
