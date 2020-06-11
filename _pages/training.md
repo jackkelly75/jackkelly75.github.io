@@ -10,8 +10,12 @@ classes: wide
 ---
 
 
-Projects
-======
+<!---
+your comment goes here
+and here
+-->
+
+### Projects
 
 * IPDGC Hackathon
   * IPDGC Project using Python to scrape Reddit data to perform sentiment analysis and investigate attitudes towards Parkinson's disease.
@@ -20,8 +24,8 @@ Projects
     * Using GitHub for team projects
     
 
-Courses
-======
+### Courses
+
 
 * [Big Data methods in R](http://jackkelly75.github.io/files/bigdatamethods.pdf)
   * Run by Mind Project
@@ -45,8 +49,9 @@ Courses
   * Learnt:
     * unsupervised, supervised and reinforcement learning from Bayesian, Information Theoretic and decision making perspectives
 
-Textbooks
-======
+
+### Textbooks
+
 * Introduction to statistical learning with application in R (7th Edition)
   * Authored by: Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani
   * 1/06-1/08 2017
