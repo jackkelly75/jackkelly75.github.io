@@ -24,6 +24,9 @@ and here
     * Using GitHub for team projects
     
 
+----------------------------------------
+
+
 ### Courses
 
 
@@ -49,6 +52,8 @@ and here
   * Learnt:
     * unsupervised, supervised and reinforcement learning from Bayesian, Information Theoretic and decision making perspectives
 
+
+----------------------------------------
 
 ### Textbooks
 
