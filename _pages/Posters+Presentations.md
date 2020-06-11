@@ -18,7 +18,7 @@ You can find the list of my attended conferences below.
 March 24, 2020  
 Accepted for poster and early careers day talk on gene-gene interaction networks in Alzheimer's disease. Conference cancelled due to COVID-19. Poster shared online in lieu of conference.  
 Presented poster on results of my network analysis of Alzheimer's disease. This work has since been published, for which more info can be found [here](http://jackkelly75.github.io/assets/docs/publications/aging_preprint.pdf)  
-[Large PDF of this poster can be found here](http://jackkelly75.github.io/files/ARUK2020.pdf)
+[Large PDF of this poster can be found here](http://jackkelly75.github.io/assets/posters/ARUK2020.pdf)
 
 # 2019
 
@@ -26,7 +26,7 @@ Presented poster on results of my network analysis of Alzheimer's disease. This 
 *Integrated systems approach to identify gentic networks and hubs in Parkinson's disease*  
 March 26-31, 2019  
 Presented poster on results of my network analysis of Parkinson's disease. This work has since been published, for which more info can be found [here](http://jackkelly75.github.io/assets/docs/publications/aging_preprint.pdf)  
-[Large PDF of this poster can be found here](http://jackkelly75.github.io/files/ADPD2019.pdf)
+[Large PDF of this poster can be found here](http://jackkelly75.github.io/assets/posters/ADPD2019.pdf)
 
 
 
@@ -35,10 +35,10 @@ Presented poster on results of my network analysis of Parkinson's disease. This 
 *Integrated systems approach to identify genetic networks and hubs in Parkinson’s disease*  
 November 12-14, 2018  
 Presented poster on very early results of my network analysis of Parkinson's disease. This work has since been published, which can be found [here](https://rdcu.be/bsWLL)  
-[Large PDF of this poster can be found here](http://jackkelly75.github.io/files/PDUK2018.pdf)
+[Large PDF of this poster can be found here](http://jackkelly75.github.io/assets/posters/PDUK2018.pdf)
 
 * **Alzheimer's research UK conference**, London, UK  
 *Cross-talk between Parkinson and Alzheimer's disease*  
 March 19-21, 2018  
 Presented poster on very early results of my network analysis of Parkinson's disease. This work has since been published, which can be found [here](https://rdcu.be/bsWLL)  
-[Large PDF of this poster can be found here](http://jackkelly75.github.io/files/ARUK2018.pdf)
+[Large PDF of this poster can be found here](http://jackkelly75.github.io/assets/posters/ARUK2018.pdf)
