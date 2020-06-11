@@ -45,6 +45,8 @@ Presented poster on very early results of my network analysis of Parkinson's dis
 [Large PDF of this poster can be found here](http://jackkelly75.github.io/assets/posters/ARUK2018.pdf)
 
 
+&nbsp; 
+
 
 <a href="http://jackkelly75.github.io/assets/posters/ARUK2020.png">
 <img src="http://jackkelly75.github.io/assets/posters/ARUK2020.png" alt="AD_poster"
