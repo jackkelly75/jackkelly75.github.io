@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /PostersPresentations/
-title: Achievements
+title: 
 author_profile: true
 header:
     overlay_image:
