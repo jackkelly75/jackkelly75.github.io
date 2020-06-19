@@ -15,45 +15,52 @@ feature_row1-1:
     url: "https://github.com/jackkelly75/Network_Hub_Detection_Kelly2020"
     btn_label: "Code"
     btn_class: "btn--primary"
-    url2: "/AD-PD_network/"
-    btn_label2: "Paper overview"
+    url2: "http://jackkelly75.github.io/files/aging_preprint.pdf/"
+    btn_label2: "Paper"
     btn_class: "btn--primary"
     tags: 
         - Network analysis
         - Alzheimer's
         - Parkinson's
         - Genomics
+        
+       
+ #   url2: "/AD-PD_network/"
+ #   btn_label2: "Paper"
+ #   btn_class: "btn--primary"
+ # use this if i want to link to an article I have written about the paper
+        
 
-feature_row1-2:
-  - image_path: /assets/images/portfolio/retention_rates.png
-    alt: "Retention Rates"
-    title: "Marketing Analytics"
-    text: "In a series of Marketing Analytics projects, I used Online Retail II dataset to create cohorts based on monthly data, calculated retention rates and visualized them via a heatmap. Then I created RFM (Recency, Frequency, Monetary) segments, calculated RFM Score for each customer and segmented into 3 custom segments 'Top', 'Middle' and 'Low' based on the total RFM Score. Finally, I calculated the revenue-based CLV (Customer Lifetime Value) for each customer."
-    url: "https://github.com/k-bosko/cohort_analysis"
-    btn_label: "Code for Cohort Analysis"
-    btn_class: "btn--primary"
-    url2: "https://github.com/k-bosko/RFM_analysis"
-    btn_label2: "Code for RFM Analysis"
-    btn_class: "btn--primary"
-    url3: "https://github.com/k-bosko/CLV_prediction"
-    btn_label3: "Code for CLV Prediction"
-    btn_class: "btn--primary"
-    tags: 
-    - CLV
-    - Cohort Analysis
-    - RFM Analysis
+#feature_row1-2:
+#  - image_path: /assets/images/portfolio/retention_rates.png
+#    alt: "Retention Rates"
+#    title: "Marketing Analytics"
+#    text: "In a series of Marketing Analytics projects, I used Online Retail II dataset to create cohorts based on monthly data, calculated retention rates and visualized them via a heatmap. Then I created RFM (Recency, Frequency, Monetary) segments, calculated RFM Score for each customer and segmented into 3 custom segments 'Top', 'Middle' and 'Low' based on the total RFM Score. Finally, I calculated the revenue-based CLV (Customer Lifetime Value) for each customer."
+#    url: "https://github.com/k-bosko/cohort_analysis"
+#    btn_label: "Code for Cohort Analysis"
+#    btn_class: "btn--primary"
+#    url2: "https://github.com/k-bosko/RFM_analysis"
+#    btn_label2: "Code for RFM Analysis"
+#    btn_class: "btn--primary"
+#    url3: "https://github.com/k-bosko/CLV_prediction"
+#    btn_label3: "Code for CLV Prediction"
+#    btn_class: "btn--primary"
+#    tags: 
+#    - CLV
+#    - Cohort Analysis
+#    - RFM Analysis
 
-feature_row1-3:
-  - image_path: /assets/images/portfolio/purchase-analytics-1200.jpg
-    alt: ""
-    title: "Purchase Analytics"
-    text: "In this project, I analyzed purchase behavior of customers that bought 5 different brands of chocolate bars in a physical FMCG store during 2 years. In total, they made 58,693 transactions, captured through the loyalty cards they used at checkout. Based on the results of customer segmentation, I explored the segments sizes and answered the following business questions: 1. How often do people from different segments visit the store? 2. What brand do customer segments prefer on average? 3. How much revenue each customer segment brings?"
-    url: "https://github.com/k-bosko/purchase_analytics"
-    btn_label: "Code"
-    btn_class: "btn--primary"
-    tags: 
-    - EDA
-    - Business Analytics
+#feature_row1-3:
+#  - image_path: /assets/images/portfolio/purchase-analytics-1200.jpg
+#    alt: ""
+#    title: "Purchase Analytics"
+#    text: "In this project, I analyzed purchase behavior of customers that bought 5 different brands of chocolate bars in a physical FMCG store during 2 years. In total, they made 58,693 transactions, captured through the loyalty cards they used at checkout. Based on the results of customer segmentation, I explored the segments sizes and answered the following business questions: 1. How often do people from different segments visit the store? 2. What brand do customer segments prefer on average? 3. How much revenue each customer segment brings?"
+#    url: "https://github.com/k-bosko/purchase_analytics"
+#    btn_label: "Code"
+#    btn_class: "btn--primary"
+#    tags: 
+#    - EDA
+#    - Business Analytics
 
 #feature_row1-4:
 #  - image_path: /assets/images/portfolio/Tableau-dashboard-1200.jpg
