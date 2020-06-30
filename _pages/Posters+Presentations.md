@@ -24,7 +24,7 @@ Presented poster on results of my network analysis of Alzheimer's disease. This 
 # 2019
 
 * **AD/PD 2019**, Lisbon, Portugal  
-*Integrated systems approach to identify gentic networks and hubs in Parkinson's disease*  
+*Integrated systems approach to identify genetic networks and hubs in Parkinson's disease*  
 March 26-31, 2019  
 Presented poster on results of my network analysis of Parkinson's disease. This work has since been published, for which more info can be found [here](http://jackkelly75.github.io/assets/docs/publications/aging_preprint.pdf)  
 [Large PDF of this poster can be found here](http://jackkelly75.github.io/assets/posters/ADPD2019.pdf)
