@@ -37,3 +37,11 @@ classes: wide
 * Yang Y, Valionyte E, **Kelly J**, Luo S (2019).
 **Histone H3F3/H3.3 chaperone DAXX converts to modulate SQSTM1 phase condensation for NFE2L2 activation.**
 *Autophagy*. DOI: 10.1080/15548627.2019.1677323
+
+
+-------------------------------------------------------------
+
+## Book chapters
+
+* **Kelly J**, Moyeed R, Carroll C, Albani D and Li X. **Gene expression meta-analysis of Parkinson’s disease and its relationship with Alzheimer’s disease.**  In: Zheng SG, editors. Prime Archives in Molecular Biology. Hyderabad, India: Vide Leaf. 2020.
+[[PDF](http://jackkelly75.github.io/assets/docs/publications/Gene-Expression-Meta-Analysis-of-Parkinson’s-disease-and-its-Relationship-with-Alzheimer’s-disease.pdf)] 
