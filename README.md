@@ -1,10 +1,12 @@
-# [https://www.cross-validated.com](https://www.cross-validated.com)
 
-The source code for my data science blog - [https://www.cross-validated.com](https://www.cross-validated.com) - hosted on GitHub Pages. 
+
+Adapted from the source code for [https://www.cross-validated.com](https://www.cross-validated.com) - hosted on GitHub Pages. 
 
 The site is built with [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) Jekyll theme. 
 
-If you like the design and want to create something similar, checkout my HOWTO series:
+
+
+The creators has a how to section below:
  
 - [Part I](https://www.cross-validated.com/Personal-website-with-Minimal-Mistakes-Jekyll-Theme-HOWTO-Part-I/): How to install minimal-mistakes Jekyll theme using Docker container
 - [Part II](https://www.cross-validated.com/Personal-website-with-Minimal-Mistakes-Jekyll-Theme-HOWTO-Part-II/): How to customize the Jekyll minimal-mistakes theme for personal website
