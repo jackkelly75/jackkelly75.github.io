@@ -14,7 +14,7 @@ classes: wide
 * **Kelly J**, Moyeed R, Carroll C, Luo S and Li X (2020).  
 **Genetic networks in Parkinson’s and Alzheimer’s disease.**  
 *Aging*. 12(6): pp.5221—5243.
-[[PDF](http://jackkelly75.github.io/assets/docs/publications/aging_preprint.pdf)]  
+[[PDF](http://jackkelly75.github.io/assets/docs/publications/ageing_networks.pdf)]  
 
 
 ## 2019
