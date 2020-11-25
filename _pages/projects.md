@@ -15,7 +15,7 @@ feature_row1-1:
     url: "https://github.com/jackkelly75/Network_Hub_Detection_Kelly2020"
     btn_label: "Code"
     btn_class: "btn--primary"
-    url2: "http://jackkelly75.github.io/files/aging_preprint.pdf/"
+    url2: "http://jackkelly75.github.io/assets/docs/publications/ageing_networks.pdf/"
     btn_label2: "Paper"
     btn_class: "btn--primary"
     tags: 
