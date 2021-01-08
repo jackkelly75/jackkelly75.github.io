@@ -9,7 +9,7 @@ classes: wide
 date:
 ---
 
-I am a Medical studies PhD candidate at the university of Plymouth, working on large genomics data. I take a data-driven approach to investigating the genomics that underlie neurodegenerative diseases, to really make the most out of all the information that we have access to. I received my MSc from the biomedical sciences program at Plymouth University and my BSc in Biomedicine from the University of East Anglia. I'm passionate about integrating biology and data science.
+I am a research associate at Manchester university and a Medical studies PhD candidate at the university of Plymouth, working on large genomics data. I take a data-driven approach to investigating the genomics that underlie neurodegenerative diseases, to really make the most out of all the information that we have access to. I received my MSc from the biomedical sciences program at Plymouth University and my BSc in Biomedicine from the University of East Anglia. I'm passionate about integrating biology and data science.
 
 I have experience in using both R and python to apply machine learning models to genomics datasets of complex diseases, including Alzheimer's, Parkinson's and Huntington's disease. In addition to machine learning, I have applied other statistical techniques, including meta-analysis, to genomics data as well as developed novel R functions to apply to gene network analysis to identify hub genes.
 
