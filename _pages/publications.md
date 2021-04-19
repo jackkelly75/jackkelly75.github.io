@@ -16,6 +16,9 @@ classes: wide
 *Aging*. 12(6): pp.5221—5243.
 [[PDF](http://jackkelly75.github.io/assets/docs/publications/ageing_networks.pdf)]  
 
+* Valionyte E, Yang Y, Roberts SL, **Kelly J**, Lu B, Luo S (2020).
+**Lowering Mutant Huntingtin Levels and Toxicity: Autophagy-Endolysosome Pathways in Huntington's Disease.**  
+*Journal of Molecular Biology*. 432(8):2673-2691
 
 ## 2019
 
@@ -28,11 +31,6 @@ classes: wide
 **Variable Baseline Papio cynocephalus Endogenous Retrovirus (PcEV) Expression Is Upregulated in Acutely SIV-Infected Macaques and Correlated to STAT1 Expression in the Spleen.**  
 *Frontiers in Immunology*. 10:901.  
 [[PDF](https://www.frontiersin.org/articles/10.3389/fimmu.2019.00901/full)]
-
-
-* Valionyte E, Yang Y, Roberts SL, **Kelly J**, Lu B, Luo S (2019).
-**Lowering Mutant Huntingtin Levels and Toxicity: Autophagy-Endolysosome Pathways in Huntington's Disease.**  
-*Journal of Molecular Biology*. DOI: 10.1016/j.jmb.2019.11.012
 
 * Yang Y, Valionyte E, **Kelly J**, Luo S (2019).
 **Histone H3F3/H3.3 chaperone DAXX converts to modulate SQSTM1 phase condensation for NFE2L2 activation.**
