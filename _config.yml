@@ -20,7 +20,7 @@ title                    : "Jack Kelly"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jack Kelly"
-description              : "PhD student in Medical studies at the University of Plymouth"
+description              : "Research Associate at the University of Manchester"
 port                     : 4000
 host                     : "0.0.0.0"
 url                      : https://jackkelly75.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -110,13 +110,13 @@ analytics:
 author:
   name             : "Jack Kelly"
   avatar           : "/assets/images/jack-small.jpg"
-  bio              : "PhD student in Medical studies at the University of Plymouth"
-  location         : "Plymouth, UK"
+  bio              : "Research associate at the University of Manchester"
+  location         : "Manchester, UK"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:jack.kelly@postgrad.plymouth.ac.uk
+      url: mailto:jack.kelly@manchester.ac.uk
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
