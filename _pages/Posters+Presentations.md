@@ -11,7 +11,10 @@ classes: wide
 
 You can find the list of my attended conferences below.
 
-
+### 2021
+* **RSS Conference**, Manchester, UK  
+Contributed talk title *Machine learning for gene expression biomarker detection in Alzheimer's disease*
+September 6-9, 2021.
 
 ### 2020
 * **Alzheimer's Research UK conference**, Newport, UK  
