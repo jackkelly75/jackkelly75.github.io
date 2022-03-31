@@ -11,20 +11,20 @@ classes: wide
 
 ## 2022
 
-* **Kelly J**, Berzuini C, Keavney B, Tomaszewski M, Guo H (2022).
-**Discovery methods for systematic analysis of causal molecular networks in modern omics datasets.**
-*arXiv*: 2201.12229
+* **Kelly J**, Berzuini C, Keavney B, Tomaszewski M, Guo H (2022).  
+**Discovery methods for systematic analysis of causal molecular networks in modern omics datasets.**  
+*arXiv*: 2201.12229  
 [[PDF](https://arxiv.org/ftp/arxiv/papers/2201/2201.12229.pdf)]  
 
-* Saunders G, Beukes E, Uus K, Armitage C, **Kelly J** and Munro K (2022).
-**Shedding Light on SARS-CoV-2, COVID-19, COVID-19 Vaccination, and Auditory Symptoms: Causality or Spurious Conjunction?**
-*Frontiers in public health*, 10: 837513.
-[[Access](https://www.frontiersin.org/articles/10.3389/fpubh.2022.837513/full)]  
+* Saunders G, Beukes E, Uus K, Armitage C, **Kelly J** and Munro K (2022).  
+**Shedding Light on SARS-CoV-2, COVID-19, COVID-19 Vaccination, and Auditory Symptoms: Causality or Spurious Conjunction?**  
+*Frontiers in public health*, 10: 837513.  
+[[Access](https://www.frontiersin.org/articles/10.3389/fpubh.2022.837513/full)]   
 
 
-* Visram A, Purdy S, **Kelly J** and Munro K (2022).
-**Longitudinal assessment of listening skills in UK infants with hearing aids using the LittlEARS Auditory Questionnaire.**
-*International Journal of Audiology*.
+* Visram A, Purdy S, **Kelly J** and Munro K (2022).  
+**Longitudinal assessment of listening skills in UK infants with hearing aids using the LittlEARS Auditory Questionnaire.**  
+*International Journal of Audiology*.  
 
 
 
