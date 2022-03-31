@@ -9,7 +9,7 @@ date:
 
 feature_row1-1:
   - image_path: assets/images/posts/networks.png
-    alt: "Visualisation of AD and PD netoworks"
+    alt: "Visualisation of AD and PD networks"
     title: "Genetic networks in Parkinson's and Alzheimer's disease"
     text: "In this project, I  conducted a network analysis of Parkinson's and Alzheimer's disease based on their gene expressions in blood. Modules, important hub genes and transcription factors that were not preserved between disease and healthy networks were identified. This work demonstrated that PD and AD share common disrupted genetics and identified novel pathways, hub genes and TFs that may be new areas for mechanistic study and important targets in both diseases. Read the paper [[here](http://jackkelly75.github.io/files/aging_preprint.pdf)]"
     url: "https://github.com/jackkelly75/Network_Hub_Detection_Kelly2020"
@@ -31,24 +31,23 @@ feature_row1-1:
  # use this if i want to link to an article I have written about the paper
         
 
-#feature_row1-2:
-#  - image_path: /assets/images/portfolio/retention_rates.png
-#    alt: "Retention Rates"
-#    title: "Marketing Analytics"
-#    text: "In a series of Marketing Analytics projects, I used Online Retail II dataset to create cohorts based on monthly data, calculated retention rates and visualized them via a heatmap. Then I created RFM (Recency, Frequency, Monetary) segments, calculated RFM Score for each customer and segmented into 3 custom segments 'Top', 'Middle' and 'Low' based on the total RFM Score. Finally, I calculated the revenue-based CLV (Customer Lifetime Value) for each customer."
-#    url: "https://github.com/k-bosko/cohort_analysis"
-#    btn_label: "Code for Cohort Analysis"
-#    btn_class: "btn--primary"
-#    url2: "https://github.com/k-bosko/RFM_analysis"
-#    btn_label2: "Code for RFM Analysis"
-#    btn_class: "btn--primary"
-#    url3: "https://github.com/k-bosko/CLV_prediction"
-#    btn_label3: "Code for CLV Prediction"
-#    btn_class: "btn--primary"
-#    tags: 
-#    - CLV
-#    - Cohort Analysis
-#    - RFM Analysis
+feature_row1-2:
+  - image_path: assets/images/posts/metaanalysis_workflow.png
+    alt: "Methodology of meta-analysis"
+    title: "Gene expression meta-analysis of Parkinson’s disease and its relationship with Alzheimer’s disease"
+    text: "Using a novel meta-analysis methodology I identified DEGs in PD brain transcriptomics data. 1046 DEGs were identified of which a majority (>70%) were downregulated. The perturbed pathways include mitochondrial dysfunction and oxidative stress, and YWHAZ and other genes coding 14–3-3 proteins are highlighted. AD and PD show a significant overlap in DEGs, of which >99% were differentially expressed in the same direction and identifies novel genes, pathways and upstream regulators which may be important targets for therapy in both diseases."
+    url: "https://github.com/jackkelly75/meta-analysis_PD_2019"
+    btn_label: "Code"
+    btn_class: "btn--primary"
+    url2: "https://molecularbrain.biomedcentral.com/articles/10.1186/s13041-019-0436-5"
+    btn_label2: "Paper"
+    btn_class: "btn--primary"
+    tags: 
+        - Meta-analysis
+        - Alzheimer's
+        - Parkinson's
+        - Genomics
+
 
 #feature_row1-3:
 #  - image_path: /assets/images/portfolio/purchase-analytics-1200.jpg
