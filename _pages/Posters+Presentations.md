@@ -12,14 +12,14 @@ classes: wide
 You can find the list of my attended conferences below.
 
 ### 2022
-* **AI UK**, online
-Postdoctoral research session talk titled *Molecular causal networks of hypertension – a machine learning approach*
+* **AI UK**, online  
+Postdoctoral research session talk titled *Molecular causal networks of hypertension – a machine learning approach*  
 March 22-23, 2022.
  
 
 ### 2021
 * **RSS Conference**, Manchester, UK  
-Contributed talk titled *Machine learning for gene expression biomarker detection in Alzheimer's disease*
+Contributed talk titled *Machine learning for gene expression biomarker detection in Alzheimer's disease*  
 September 6-9, 2021.
 
 ### 2020
