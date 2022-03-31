@@ -8,6 +8,21 @@ classes: wide
 date:
 
 feature_row1-1:
+  - image_path: assets/images/posts/causal_networks.PNG
+    alt: "Example Causal network"
+    title: "Discovery methods for systematic analysis of causal molecular networks in modern _omics_ datasets"
+    text: "With the increasing availability and size of multi-omics datasets, investigating the casual relationships between molecular phenotypes has become an important aspect of exploring underlying biology and genetics. This paper aims to introduce and review the available methods for building large-scale causal molecular networks that have been developed in the past decade. Existing methods have their own strengths and limitations so there is no one best approach, and it is instead down to the discretion of the researcher. This review also aims to discuss some of the current limitations to biological interpretation of these networks, and important factors to consider for future studies on molecular networks."
+    url: "https://arxiv.org/ftp/arxiv/papers/2201/2201.12229.pdf"
+    btn_label: "Paper"
+    btn_class: "btn--primary"
+    tags: 
+        - Causal Inference
+        - Causal molecular networks
+        - omics
+        - Bayesian networks
+        - Mendelian randomisation
+        - 
+feature_row1-2:
   - image_path: assets/images/posts/networks.png
     alt: "Visualisation of AD and PD networks"
     title: "Genetic networks in Parkinson's and Alzheimer's disease"
@@ -31,7 +46,7 @@ feature_row1-1:
  # use this if i want to link to an article I have written about the paper
         
 
-feature_row1-2:
+feature_row1-3:
   - image_path: assets/images/posts/metaanalysis_workflow.png
     alt: "Methodology of meta-analysis"
     title: "Gene expression meta-analysis of Parkinson’s disease and its relationship with Alzheimer’s disease"
@@ -48,20 +63,7 @@ feature_row1-2:
         - Parkinson's
         - Genomics
 
-feature_row1-3:
-  - image_path: assets/images/posts/causal_networks.PNG
-    alt: "Example Causal network"
-    title: "Discovery methods for systematic analysis of causal molecular networks in modern _omics_ datasets"
-    text: "With the increasing availability and size of multi-omics datasets, investigating the casual relationships between molecular phenotypes has become an important aspect of exploring underlying biology and genetics. This paper aims to introduce and review the available methods for building large-scale causal molecular networks that have been developed in the past decade. Existing methods have their own strengths and limitations so there is no one best approach, and it is instead down to the discretion of the researcher. This review also aims to discuss some of the current limitations to biological interpretation of these networks, and important factors to consider for future studies on molecular networks."
-    url: "https://arxiv.org/ftp/arxiv/papers/2201/2201.12229.pdf"
-    btn_label: "Paper"
-    btn_class: "btn--primary"
-    tags: 
-        - Causal Inference
-        - Causal molecular networks
-        - omics
-        - Bayesian networks
-        - Mendelian randomisation
+
 
 
 
