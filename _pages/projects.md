@@ -48,18 +48,22 @@ feature_row1-2:
         - Parkinson's
         - Genomics
 
+feature_row1-3:
+  - image_path: assets/images/posts/causal_networks.PNG
+    alt: "Example Causal network"
+    title: "Discovery methods for systematic analysis of causal molecular networks in modern _omics_ datasets"
+    text: "With the increasing availability and size of multi-omics datasets, investigating the casual relationships between molecular phenotypes has become an important aspect of exploring underlying biology and genetics. This paper aims to introduce and review the available methods for building large-scale causal molecular networks that have been developed in the past decade. Existing methods have their own strengths and limitations so there is no one best approach, and it is instead down to the discretion of the researcher. This review also aims to discuss some of the current limitations to biological interpretation of these networks, and important factors to consider for future studies on molecular networks."
+    url: "https://arxiv.org/ftp/arxiv/papers/2201/2201.12229.pdf"
+    btn_label: "Paper"
+    btn_class: "btn--primary"
+    tags: 
+        - Causal Inference
+        - Causal molecular networks
+        - omics
+        - Bayesian networks
+        - Mendelian randomisation
 
-#feature_row1-3:
-#  - image_path: /assets/images/portfolio/purchase-analytics-1200.jpg
-#    alt: ""
-#    title: "Purchase Analytics"
-#    text: "In this project, I analyzed purchase behavior of customers that bought 5 different brands of chocolate bars in a physical FMCG store during 2 years. In total, they made 58,693 transactions, captured through the loyalty cards they used at checkout. Based on the results of customer segmentation, I explored the segments sizes and answered the following business questions: 1. How often do people from different segments visit the store? 2. What brand do customer segments prefer on average? 3. How much revenue each customer segment brings?"
-#    url: "https://github.com/k-bosko/purchase_analytics"
-#    btn_label: "Code"
-#    btn_class: "btn--primary"
-#    tags: 
-#    - EDA
-#    - Business Analytics
+
 
 #feature_row1-4:
 #  - image_path: /assets/images/portfolio/Tableau-dashboard-1200.jpg
