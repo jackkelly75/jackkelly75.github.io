@@ -9,6 +9,11 @@ header:
 classes: wide
 ---
 
+### Awards
+
+* The Alan Turing Institute Post-Doctoral Enrichment Award 2022
+
+------------
 
 
 ### Projects
@@ -25,6 +30,15 @@ classes: wide
 
 ### Courses
 
+* Turing Institute Public engagement of data science and AI
+    * 25-29/04/2022
+    * Learnt:
+        * Critically examining the different forms of public engagement
+        * Impact of public engagement upon both practices of research and innovation as well as society more broadly
+        * Practical method of public engagement
+            * transparent and explainable methods of data governance to support project activities
+            * methods of data visualisation to support the communication of science and technology
+            * awareness of social and psychological biases
 
 * [Big Data methods in R](http://jackkelly75.github.io/assets/docs/bigdatamethods.pdf)
   * Run by Mind Project
