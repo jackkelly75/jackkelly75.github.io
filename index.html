@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Training tracker</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&family=Figtree:wght@400;600&display=swap">
+<style>
+:root{--bg:#f3f1ea;--card:#fff;--ink:#1f2a24;--mute:#66726b;--light:#eeeed2;--dark:#769656;--line:#d9d6c8;--accent:#b8452f;--on:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c211e;--card:#262d29;--ink:#ecece4;--mute:#a0aaa3;--light:#d8d9bd;--dark:#6a8a4a;--line:#3a443e;--accent:#e0806a}}
+:root[data-theme="dark"]{--bg:#1c211e;--card:#262d29;--ink:#ecece4;--mute:#a0aaa3;--light:#d8d9bd;--dark:#6a8a4a;--line:#3a443e;--accent:#e0806a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Figtree,system-ui,sans-serif}
+main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+h1,h2{font-family:Bitter,Georgia,serif;margin:0}
+h1{font-size:28px;font-weight:800;line-height:1.15}
+h2{font-size:19px;font-weight:600;margin-bottom:8px}
+.sub{color:var(--mute);margin:4px 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:16px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);border:2px solid var(--ink);border-radius:6px;overflow:hidden}
+.sq{aspect-ratio:1;border:0;font:600 13px Figtree,sans-serif;color:#1f2a24;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;gap:2px;position:relative}
+.sq:nth-child(odd){background:var(--light)}.sq:nth-child(even){background:var(--dark);color:#fff}
+.sq small{font-weight:400;font-size:11px}
+.sq.done::after{content:"♞";position:absolute;font-size:30px;opacity:.9;color:#1f2a24}
+.sq:nth-child(even).done::after{color:#fff}
+.sq.done span,.sq.done small{opacity:.25}
+.sq.sel{outline:3px solid var(--accent);outline-offset:-3px}
+.sq:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.rest{opacity:.55}
+button.go{width:100%;margin-top:12px;padding:12px;border:0;border-radius:8px;background:var(--accent);color:#fff;font:600 16px Figtree,sans-serif;cursor:pointer}
+button.go.undo{background:transparent;color:var(--ink);border:1px solid var(--line)}
+button.sm{padding:9px 14px;border:0;border-radius:8px;background:var(--ink);color:var(--bg);font:600 14px Figtree,sans-serif;cursor:pointer}
+ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.stats b{display:block;font:800 26px Bitter,Georgia,serif}
+.stats span{font-size:13px;color:var(--mute)}
+.heat{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-flow:column;grid-template-rows:repeat(7,1fr);gap:3px}
+.heat i{aspect-ratio:1;border-radius:2px;background:var(--line);opacity:.35}
+.heat i.p{opacity:1;background:transparent;border:1px solid var(--line)}
+.heat i.d{opacity:1;background:var(--dark);border:0}
+.heat i.t{outline:2px solid var(--accent)}
+input,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:16px Figtree,sans-serif}
+.row{display:flex;gap:8px;margin-top:8px}
+.note{color:var(--mute);font-size:14px}
+a{color:var(--accent)}
+[hidden]{display:none!important}
+.tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin:14px 0 16px}
+.tabs button{border:0;background:none;color:var(--mute);font:600 16px Figtree,sans-serif;padding:10px 16px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tabs button.on{color:var(--ink);border-bottom-color:var(--accent)}
+.zrow{display:grid;grid-template-columns:40px 1fr 1fr 1fr;gap:6px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.zrow.tod{background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.chk{padding:10px 4px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--ink);font:600 13px Figtree,sans-serif;cursor:pointer}
+.chk.on{background:#3f6b2c;color:#fff;border-color:#3f6b2c}
+.heat i.h{opacity:.55;background:var(--dark)}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<h1>Training tracker</h1>
+<nav class="tabs" id="tabs" aria-label="Trackers"><button data-t="chess">Chess</button><button data-t="chinese">Chinese</button></nav>
+<section id="tab-chess">
+<p class="sub" id="block"></p>
+
+<div class="week" id="week" role="group" aria-label="This week"></div>
+
+<div class="card" id="detail"></div>
+
+<div class="card">
+<div class="stats">
+<div><b id="sStreak">0</b><span>session streak</span></div>
+<div><b id="sWeek">0/5</b><span>sessions this week</span></div>
+<div><b id="sMin">0</b><span>minutes this week</span></div>
+</div>
+</div>
+
+<div class="card">
+<h2>Last 12 weeks</h2>
+<div class="heat" id="heat" aria-label="Training history"></div>
+<p class="note">Filled squares are sessions done. Outlined squares are sessions you missed.</p>
+</div>
+
+<div class="card">
+<h2>Your commitment</h2>
+<p class="note" style="margin-top:0">Decide in advance when and what you’ll do, so the habit doesn’t depend on motivation.</p>
+<input id="pledge" placeholder="I will train at ___ (time) after ___ (cue). If I miss, I will ___">
+<p class="note" style="margin-bottom:0">Tip: tell a friend, and send them your weekly count every Sunday.</p>
+</div>
+
+<div class="card">
+<h2>Rating log</h2>
+<div class="row"><input id="rate" type="number" inputmode="numeric" placeholder="Rapid rating today"><button class="sm" id="saveRate">Save</button></div>
+<svg id="spark" viewBox="0 0 300 80" width="100%" style="margin-top:10px" role="img" aria-label="Rating over time"></svg>
+<p class="note" id="rateNote" style="margin-bottom:0">Log your rating once a week. Ratings swing day to day, so judge by the 4-week trend.</p>
+</div>
+
+<div class="card">
+<h2>Sunday review</h2>
+<textarea id="review" rows="3" placeholder="One thing I learned this week. One mistake I keep making."></textarea>
+<p class="note" style="margin-bottom:0">Saved in this browser for this week only.</p>
+</div>
+</section>
+<section id="tab-chinese" hidden>
+<p class="sub" id="zblock"></p>
+<div class="card"><h2>This week</h2><div id="zweek"></div>
+<p class="note" style="margin-bottom:0">Every day: Pimsleur (30 min) and one Hello Chinese lesson (about 15 min). Focus sessions are 60 min on Tuesday and Sunday.</p></div>
+<div class="card"><div class="stats"><div><b id="zStreak">0</b><span>day streak</span></div><div><b id="zPct">0%</b><span>of this week done</span></div><div><b id="zHrs">0</b><span>hours studied</span></div></div>
+<p class="note" id="zCounts" style="margin:10px 0 0;text-align:center"></p></div>
+<div class="card"><h2>Focus sessions this block</h2><div id="zfocus"></div></div>
+<div class="card"><h2>Last 12 weeks</h2><div class="heat" id="zheat" aria-label="Chinese study history"></div>
+<p class="note">Dark squares are full days, lighter squares are part-done days, outlined squares are missed days. The streak counts days with both Pimsleur and Hello Chinese done.</p></div>
+<div class="card"><h2>Sunday review</h2><textarea id="zrev" rows="3" placeholder="Phrases I can now say. What I still mix up."></textarea><p class="note" style="margin-bottom:0">Saved for this week only.</p></div>
+<div class="card"><h2>12-week learning plan</h2>
+<p class="note" style="margin-top:0">Pimsleur trains your ear and speaking. Hello Chinese adds reading, characters and vocabulary. The focus sessions fill the gaps neither covers well: tones, writing, grammar, reading and talking to a real person. After week 12, repeat the cycle with HSK 2 material.</p>
+<details open><summary>Weeks 1–4: Sounds and survival</summary><ul><li>Goal: read pinyin aloud with the right tones, and handle greetings, numbers and ordering food.</li><li>Pimsleur: aim to finish roughly Level 1 over this phase, repeating any lesson where you froze.</li><li>Check at week 4: say 20 phrases from memory without prompts.</li></ul></details>
+<details><summary>Weeks 5–8: Characters and sentences</summary><ul><li>Goal: recognise about 100 common characters and build simple sentences.</li><li>Start a flashcard deck (Anki) for every new word, with the pinyin and a sentence.</li><li>Check at week 8: write 10 simple sentences about yourself from memory.</li></ul></details>
+<details><summary>Weeks 9–12: Reading and conversation</summary><ul><li>Goal: read short graded texts and hold a basic 5-minute conversation.</li><li>Book a tutor or language partner for at least one session per week.</li><li>Check at week 12: a 5-minute chat with a tutor, plus an HSK 1 practice test.</li></ul></details>
+</div>
+<div class="card"><h2>Resources</h2><ul>
+<li><a href="https://www.pimsleur.com" target="_blank" rel="noopener">Pimsleur</a>: audio course for listening and speaking. Say every answer out loud.</li>
+<li><a href="https://www.hellochinese.cc" target="_blank" rel="noopener">Hello Chinese</a>: lessons, writing practice and HSK-aligned courses.</li>
+<li><a href="https://www.pleco.com" target="_blank" rel="noopener">Pleco</a>: the standard dictionary app, with handwriting lookup.</li>
+<li><a href="https://apps.ankiweb.net" target="_blank" rel="noopener">Anki</a>: spaced-repetition flashcards. <a href="https://skritter.com" target="_blank" rel="noopener">Skritter</a> is a paid alternative for writing characters.</li>
+<li><a href="https://resources.allsetlearning.com/chinese/grammar/" target="_blank" rel="noopener">Chinese Grammar Wiki</a>: free grammar explanations sorted by level.</li>
+<li><a href="https://www.duchinese.net" target="_blank" rel="noopener">Du Chinese</a>: graded reading with audio, from beginner level.</li>
+<li><a href="https://www.italki.com" target="_blank" rel="noopener">italki</a> and <a href="https://www.hellotalk.com" target="_blank" rel="noopener">HelloTalk</a>: paid tutors and free language exchange partners.</li>
+</ul></div>
+</section>
+<div class="card">
+<h2>Back up and sync</h2>
+<p class="note" style="margin-top:0">To use the same data on every device, paste a GitHub token with only the <b>gist</b> permission, on each device. Your data is stored in a private gist on your own GitHub account. <a href="https://github.com/settings/tokens/new?scopes=gist&description=chess-tracker" target="_blank" rel="noopener">Create a token</a></p>
+<div class="row"><input id="tok" type="password" placeholder="GitHub token (gist scope)" autocomplete="off"><button class="sm" id="syncBtn">Sync</button></div>
+<p class="note" id="syncMsg">Not syncing yet.</p>
+<div class="row"><button class="sm" id="exp">Download backup</button><label class="sm" style="cursor:pointer;display:inline-block">Restore from file<input id="imp" type="file" accept=".json,application/json" hidden></label></div>
+</div>
+
+<p class="note"><a href="#" id="reset">Reset all data</a></p>
+</main>
+
+<script>
+var KEY="chessTracker1",S={start:null,done:{},dt:{},ratings:[],pledge:"",reviews:{}};
+try{var raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw))}catch(e){}
+var SY={token:"",gist:""},TK="chessTrackerSync",syncT;
+try{SY=Object.assign(SY,JSON.parse(localStorage.getItem(TK)||"{}"))}catch(e){}
+function saveSY(){try{localStorage.setItem(TK,JSON.stringify(SY))}catch(e){}}
+function save(skip){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}
+if(!skip&&SY.token){clearTimeout(syncT);syncT=setTimeout(sync,2000)}}
+function dk(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x}
+function monday(d){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate());x.setDate(x.getDate()-((x.getDay()+6)%7));return x}
+var today=new Date();today=new Date(today.getFullYear(),today.getMonth(),today.getDate());
+if(!S.start){S.start=dk(monday(today));save()}
+var DN=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+var MINS=[15,15,60,15,0,60,0];
+var BLOCKS=[
+{n:"Calculation",d:"Weeks 1–4",tue:"Endgame basics: king and pawn opposition, then the Lucena and Philidor positions.",thu:"Puzzles by theme: forks, pins, skewers, then back-rank and mating patterns.",sat:"20 min: puzzles on your weakest theme. 40 min: one video lesson or chess.com Lesson on a tactical theme, then replay it from the starting position."},
+{n:"Openings and structure",d:"Weeks 5–8",tue:"Openings, rotating by week: (1) Ruy Lopez Closed main line, (2) Ruy Lopez sidelines: Berlin, Exchange and Anti-Marshall, (3) Kan main lines: 5.Nc3 Qc7 and 5.Bd3, (4) Kan vs the Maroczy Bind and anti-Sicilians (2.c3, 2.Nc3). Spend 15 min on one line and learn the plans, not just the moves.",thu:"Puzzles taken from your own lost games (Analysis, then Practice Mistakes).",sat:"20 min: drill Tuesday’s lines in the chess.com Explorer. 40 min: play through a model Ruy Lopez or Kan game and write why each side’s plan makes sense."},
+{n:"Strategy and endgames",d:"Weeks 9–12",tue:"Rook endgames: active rook, cutting off the king, and 7th-rank rooks.",thu:"Puzzles with a rule: name three candidate moves before choosing one.",sat:"20 min: puzzles. 40 min: annotated master game, covering the moves and guessing each one before you reveal it."}
+];
+function block(d){var n=Math.floor((d-new Date(S.start+"T00:00"))/864e5/28);n=Math.max(0,n);return BLOCKS[n%3]}
+function plan(i,d){var b=block(d);
+if(i==0)return ["Tactics",["Do 10 puzzles at your own pace (puzzle rating near or just above yours).","Calculate the whole line before touching a piece. After a miss, replay the right line twice."]];
+if(i==1)return [b.n=="Openings and structure"?"Openings":"Endgames",[b.tue]];
+if(i==2)return ["Play and review",["30 min: one rapid game (15|10, or 10|5 if short on time). Before each move, check what your opponent just threatened and which of your pieces are undefended.","30 min: review. Find your own mistakes first, then use the engine. Note where you left your opening prep and write down one lesson."]];
+if(i==3)return ["Tactics",[b.thu]];
+if(i==5)return ["Study session",[b.sat]];
+return ["Rest",["Rest day. Optionally play for fun, with no pressure."]]}
+function isPlanned(i){return MINS[i]>0}
+
+var sel=dk(today);
+function render(){
+var mon=monday(today),W=document.getElementById("week"),n=0,mins=0;W.innerHTML="";
+document.getElementById("block").textContent=block(today).n+" block · "+block(today).d.toLowerCase()+" of a 12-week cycle";
+for(var i=0;i<7;i++){var d=addDays(mon,i),k=dk(d),p=plan(i,d),b=document.createElement("button");
+b.className="sq"+(MINS[i]?"":" rest")+(S.done[k]?" done":"")+(k==sel?" sel":"");
+b.innerHTML="<span>"+DN[i]+"</span><small>"+(MINS[i]?MINS[i]+"m":"rest")+"</small>";
+b.setAttribute("aria-label",DN[i]+" "+p[0]+(S.done[k]?", done":""));
+b.onclick=(function(k){return function(){sel=k;render()}})(k);W.appendChild(b);
+if(S.done[k]&&MINS[i]){n++;mins+=MINS[i]}}
+var sd=new Date(sel+"T00:00"),si=(sd.getDay()+6)%7,sp=plan(si,sd),D=document.getElementById("detail");
+var h="<h2>"+DN[si]+" · "+sp[0]+(MINS[si]?" · "+MINS[si]+" min":"")+"</h2><ul>"+sp[1].map(function(t){return"<li>"+t+"</li>"}).join("")+"</ul>";
+if(MINS[si]){h+='<button class="go'+(S.done[sel]?" undo":"")+'" id="mark">'+(S.done[sel]?"Undo – mark not done":"Mark session done")+"</button>"}
+D.innerHTML=h;var m=document.getElementById("mark");if(m)m.onclick=function(){S.done[sel]=S.done[sel]?0:1;S.dt[sel]=Date.now();save();render()};
+document.getElementById("sWeek").textContent=n+"/5";document.getElementById("sMin").textContent=mins;
+var st=0;for(var j=0;j<400;j++){var dd=addDays(today,-j),ii=(dd.getDay()+6)%7;if(!MINS[ii])continue;if(S.done[dk(dd)])st++;else if(j==0)continue;else break}
+document.getElementById("sStreak").textContent=st;
+var H=document.getElementById("heat");H.innerHTML="";var m0=addDays(mon,-77);
+for(var c=0;c<84;c++){var d2=addDays(m0,c),i2=c%7,k2=dk(d2),e=document.createElement("i");
+if(d2>today){e.style.visibility="hidden"}
+else if(S.done[k2])e.className="d";else if(MINS[i2]&&k2!=dk(today))e.className="p";
+if(k2==dk(today))e.className+=" t";H.appendChild(e)}
+var wk=dk(mon);document.getElementById("review").value=S.reviews[wk]||"";
+spark()}
+function spark(){var r=S.ratings.slice(-20),s=document.getElementById("spark");if(r.length<2){s.innerHTML="";return}
+var v=r.map(function(x){return x.v}),lo=Math.min.apply(0,v)-20,hi=Math.max.apply(0,v)+20;
+var pts=v.map(function(y,i){return(10+i*(280/(v.length-1))).toFixed(1)+","+(70-(y-lo)/(hi-lo)*60).toFixed(1)}).join(" ");
+s.innerHTML='<polyline points="'+pts+'" fill="none" stroke="var(--dark)" stroke-width="2.5"/><text x="4" y="12" font-size="11" fill="var(--mute)">'+hi+'</text><text x="4" y="76" font-size="11" fill="var(--mute)">'+lo+'</text>';
+document.getElementById("rateNote").textContent="Latest: "+v[v.length-1]+" ("+(v[v.length-1]-v[0]>=0?"+":"")+(v[v.length-1]-v[0])+" since first entry)."}
+document.getElementById("saveRate").onclick=function(){var x=parseInt(document.getElementById("rate").value,10);if(!x||x<100||x>3500)return;S.ratings.push({d:dk(today),v:x});save();document.getElementById("rate").value="";spark()};
+document.getElementById("pledge").value=S.pledge;
+document.getElementById("pledge").oninput=function(){S.pledge=this.value;save()};
+document.getElementById("review").oninput=function(){S.reviews[dk(monday(today))]=this.value;save()};
+document.getElementById("reset").onclick=function(e){e.preventDefault();if(confirm("Delete all your training data?")){S={start:dk(monday(today)),done:{},dt:{},ratings:[],pledge:"",reviews:{}};save();document.getElementById("pledge").value="";render();zrender()}};
+function setMsg(t){document.getElementById("syncMsg").textContent=t}
+function merge(a,b){var o={start:a.start,done:{},dt:{},ratings:[],pledge:a.pledge||b.pledge||"",reviews:Object.assign({},b.reviews||{})};
+if(b.start&&b.start<a.start)o.start=b.start;
+Object.keys(a.reviews||{}).forEach(function(k){if(a.reviews[k])o.reviews[k]=a.reviews[k]});
+var ad=a.dt||{},bd=b.dt||{},bo=b.done||{};
+Object.keys(Object.assign({},a.done,bo)).forEach(function(k){var av=a.done[k],bv=bo[k];
+o.done[k]=av===undefined?bv:bv===undefined?av:((bd[k]||0)>(ad[k]||0)?bv:av);o.dt[k]=Math.max(ad[k]||0,bd[k]||0)});
+var seen={};(a.ratings||[]).concat(b.ratings||[]).forEach(function(x){var id=x.d+"|"+x.v;if(!seen[id]){seen[id]=1;o.ratings.push(x)}});
+o.ratings.sort(function(x,y){return x.d<y.d?-1:x.d>y.d?1:0});o.zh=mergeZ(a.zh,b.zh);return o}
+function api(path,opt){opt=opt||{};opt.headers={"Authorization":"Bearer "+SY.token,"Accept":"application/vnd.github+json","Content-Type":"application/json"};
+return fetch("https://api.github.com"+path,opt).then(function(r){if(!r.ok)throw new Error("GitHub returned "+r.status+(r.status==401?" (check your token)":""));return r.json()})}
+function sync(){if(!SY.token)return;setMsg("Syncing…");
+var find=SY.gist?Promise.resolve(SY.gist):api("/gists?per_page=100").then(function(l){var g=l.filter(function(x){return x.files&&x.files["chess-tracker.json"]})[0];return g?g.id:null});
+return find.then(function(id){if(!id)return null;SY.gist=id;saveSY();
+return api("/gists/"+id).then(function(g){var f=g.files["chess-tracker.json"];return f?JSON.parse(f.content):null})})
+.then(function(remote){if(remote)S=merge(S,remote);save(true);document.getElementById("pledge").value=S.pledge;render();zrender();
+var body={files:{"chess-tracker.json":{content:JSON.stringify(S)}}};
+if(SY.gist)return api("/gists/"+SY.gist,{method:"PATCH",body:JSON.stringify(body)});
+body.description="Chess training tracker data";body.public=false;
+return api("/gists",{method:"POST",body:JSON.stringify(body)}).then(function(g){SY.gist=g.id;saveSY()})})
+.then(function(){setMsg("Synced at "+new Date().toLocaleTimeString())}).catch(function(e){setMsg("Sync failed: "+e.message)})}
+document.getElementById("exp").onclick=function(){var u=URL.createObjectURL(new Blob([JSON.stringify(S,null,1)],{type:"application/json"})),a=document.createElement("a");a.href=u;a.download="chess-tracker-backup.json";a.click();URL.revokeObjectURL(u)};
+document.getElementById("imp").onchange=function(){var f=this.files[0];if(!f)return;var r=new FileReader();
+r.onload=function(){try{S=merge(S,JSON.parse(r.result));save();document.getElementById("pledge").value=S.pledge;render();zrender();setMsg("Backup restored.")}catch(e){setMsg("That file is not a valid backup.")}};r.readAsText(f)};
+document.getElementById("tok").value=SY.token;
+document.getElementById("syncBtn").onclick=function(){SY.token=document.getElementById("tok").value.trim();SY.gist="";saveSY();sync()};
+var ZF=[1,6],ZT=[["p","Pimsleur",30],["h","Hello Chinese",15],["f","Focus",60]];
+var ZB=[
+{n:"Sounds and survival",d:"Weeks 1–4",g:"read pinyin aloud with correct tones and handle greetings, numbers and ordering food.",f:{1:"Tones and pinyin. 20 min: say each of the four tones, then two-syllable tone pairs. 20 min: listen to tone and pinyin minimal pairs (Hello Chinese pronunciation lessons). 20 min: shadow the last Pimsleur lesson.",6:"Speaking and review. 30 min: redo the week’s two hardest Pimsleur lessons, speaking every reply aloud. 15 min: record yourself saying 10 phrases and compare. 15 min: add new words to Anki."}},
+{n:"Characters and sentences",d:"Weeks 5–8",g:"recognise about 100 common characters and build simple sentences.",f:{1:"Characters. 30 min: writing practice (Hello Chinese or Skritter). 15 min: radicals and components. 15 min: Anki review.",6:"Grammar and sentences. 25 min: one Chinese Grammar Wiki A1 pattern. 15 min: write 8 sentences with it. 20 min: Anki. Then say your sentences aloud."}},
+{n:"Reading and conversation",d:"Weeks 9–12",g:"read short graded texts and hold a basic 5-minute conversation.",f:{1:"Reading. 40 min: read two short graded texts (Du Chinese or Hello Chinese stories), look up unknown words in Pleco, then re-read without help. 20 min: add 10 words to Anki.",6:"Conversation. 30 min: tutor (italki) or HelloTalk partner. 15 min: record a 2-minute self-introduction. 15 min: write down and review your mistakes."}}];
+function Z(){var z=S.zh=S.zh||{};z.done=z.done||{};z.dt=z.dt||{};z.rev=z.rev||{};if(!z.start)z.start=dk(monday(today));return z}
+function md(ad,adt,bd,bdt){var o={},t={};Object.keys(Object.assign({},ad,bd)).forEach(function(k){var av=ad[k],bv=bd[k];o[k]=av===undefined?bv:bv===undefined?av:((bdt[k]||0)>(adt[k]||0)?bv:av);t[k]=Math.max(adt[k]||0,bdt[k]||0)});return[o,t]}
+function mergeZ(a,b){var D={done:{},dt:{},rev:{}};a=Object.assign({},D,a);b=Object.assign({},D,b);
+var m=md(a.done,a.dt,b.done,b.dt),r=Object.assign({},b.rev);Object.keys(a.rev).forEach(function(k){if(a.rev[k])r[k]=a.rev[k]});
+return{start:a.start&&b.start?(a.start<b.start?a.start:b.start):(a.start||b.start),done:m[0],dt:m[1],rev:r}}
+function zOn(t,i){return t[0]!="f"||ZF.indexOf(i)>-1}
+function zrender(){var z=Z(),mon=monday(today),W=document.getElementById("zweek"),planned=0,dn=0;W.innerHTML="";
+for(let i=0;i<7;i++){const k=dk(addDays(mon,i)),row=document.createElement("div");row.className="zrow"+(k==dk(today)?" tod":"");row.innerHTML="<b>"+DN[i]+"</b>";
+ZT.forEach(function(t){if(!zOn(t,i)){row.appendChild(document.createElement("span"));return}
+const key=k+"|"+t[0],b=document.createElement("button"),on=z.done[key];planned++;if(on)dn++;
+b.className="chk"+(on?" on":"");b.textContent=(on?"✓ ":"")+(t[0]=="f"?"Focus 60m":t[1]);b.setAttribute("aria-pressed",on?"true":"false");
+b.onclick=function(){z.done[key]=z.done[key]?0:1;z.dt[key]=Date.now();save();zrender()};row.appendChild(b)});
+W.appendChild(row)}
+document.getElementById("zPct").textContent=Math.round(planned?dn/planned*100:0)+"%";
+var st=0;for(var j=0;j<400;j++){var k2=dk(addDays(today,-j));if(z.done[k2+"|p"]&&z.done[k2+"|h"])st++;else if(j==0)continue;else break}
+document.getElementById("zStreak").textContent=st;
+var tot=0,cp=0,ch=0;Object.keys(z.done).forEach(function(k){if(!z.done[k])return;var c=k.split("|")[1];tot+=c=="p"?30:c=="h"?15:60;if(c=="p")cp++;if(c=="h")ch++});
+document.getElementById("zHrs").textContent=(tot/60).toFixed(1);
+document.getElementById("zCounts").textContent="Pimsleur sessions logged: "+cp+". Hello Chinese lessons logged: "+ch+".";
+var n=Math.max(0,Math.floor((today-new Date(z.start+"T00:00"))/864e5/28)),B=ZB[n%3];
+document.getElementById("zblock").textContent=B.n+" block, "+B.d.toLowerCase()+". Goal: "+B.g;
+document.getElementById("zfocus").innerHTML=ZF.map(function(i){return"<p style='margin:0 0 10px'><b>"+DN[i]+"</b>: "+B.f[i]+"</p>"}).join("");
+var H=document.getElementById("zheat");H.innerHTML="";var m0=addDays(mon,-77);
+for(var c=0;c<84;c++){var d2=addDays(m0,c),i2=c%7,k3=dk(d2),e=document.createElement("i"),pl=0,dd=0;
+ZT.forEach(function(t){if(zOn(t,i2)){pl++;if(z.done[k3+"|"+t[0]])dd++}});
+if(d2>today)e.style.visibility="hidden";else if(dd==pl)e.className="d";else if(dd>0)e.className="h";else if(k3!=dk(today))e.className="p";
+if(k3==dk(today))e.className+=" t";H.appendChild(e)}
+document.getElementById("zrev").value=z.rev[dk(mon)]||""}
+document.getElementById("zrev").oninput=function(){Z().rev[dk(monday(today))]=this.value;save()};
+function tabs(){var bs=document.querySelectorAll("#tabs button");
+function show(n){bs.forEach(function(b){var on=b.dataset.t==n;b.classList.toggle("on",on);b.setAttribute("aria-current",on?"page":"false");document.getElementById("tab-"+b.dataset.t).hidden=!on})}
+bs.forEach(function(b){b.onclick=function(){show(b.dataset.t);try{history.replaceState(null,"","#"+b.dataset.t)}catch(e){}}});
+show(location.hash=="#chinese"?"chinese":"chess")}
+render();zrender();tabs();
+if(SY.token)sync();
+</script>
+</body>
+</html>
